@@ -182,9 +182,10 @@ int IntType::multiply(int lhs, int rhs)
 
 int IntType::divide(int lhs, int rhs)
 {
-    if( rhs == 0.0)
+    if( rhs == 0)
     {
-        std::cout << "\nwarning, integer division by zero returns 'inf' !\n";
+        std::cout << "error, integer division by zero will crash the program!\nreturning lhs\n";
+        return lhs;
     }
     return lhs / rhs;
 }
